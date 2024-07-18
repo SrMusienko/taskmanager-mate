@@ -44,11 +44,11 @@ class Worker(AbstractUser):
 
 class Task(models.Model):
     CHOICES = [
-        ("Urgent", "Срочно"),
-        ("High", "Высокий"),
-        ("Medium", "Средний"),
-        ("Low", "Низкий"),
-        ("Not Urgent", "Не срочно"),
+        ("Urgent", "Терміново"),
+        ("High", "Високий"),
+        ("Medium", "Середній"),
+        ("Low", "Низький"),
+        ("Not Urgent", "Не терміново"),
     ]
     name = models.CharField(max_length=255, unique=True)
     description = models.TextField()
