@@ -6,10 +6,10 @@ from .models import Worker
 class WorkerCreationForm(UserCreationForm):
     class Meta:
         model = Worker
-        fields = ("username", "first_name", "last_name", "email", "position")
+        fields = ("username", "first_name", "last_name", "email", "position", "photo")
 
 
 class WorkerChangeForm(UserChangeForm):
     class Meta:
         model = Worker
-        fields = ("username", "first_name", "last_name", "email", "position")
+        fields = ("username", "first_name", "last_name", "email", "position", "photo")
