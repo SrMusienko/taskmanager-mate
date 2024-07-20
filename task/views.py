@@ -43,3 +43,19 @@ class PositionsCreateView(LoginRequiredMixin, generic.CreateView):
 class PositionsDetailView(LoginRequiredMixin, generic.DetailView):
     model = Position
     template_name = "task/position_detail.html"
+
+    def get_queryset(self):
+        return super().get_queryset().prefetch_related('worker_set')
+
+
+class PositionsDeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = Position
+    success_url = reverse_lazy("task:position-list")
+    template_name = 'task/position_confirm_delete.html'
+
+
+class PositionsUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = Position
+    fields = "__all__"
+    success_url = reverse_lazy("task:position-list")
+    template_name = "task/position_form.html"
