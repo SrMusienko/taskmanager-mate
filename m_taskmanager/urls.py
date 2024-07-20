@@ -22,7 +22,7 @@ from task.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", index, name="index"),
+    path("", include("task.urls", namespace="task")),
     path("accounts/", include("django.contrib.auth.urls")),
 ]
 if settings.DEBUG:
