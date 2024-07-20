@@ -1,17 +1,10 @@
-<ul class="sidebar-nav list-group">
-  {% if user.is_authenticated %}
-    <p>Welcome, {{ user.username }}!</p>
-    <form method="post" action="{% url 'logout' %}">
-      {% csrf_token %}
-    <button type="submit">Logout</button>
-</form>
-  {% else %}
-    <a href="{% url 'login' %}">Login</a>
-  {% endif %}
 
-</ul>
-<ul class="list-unstyled">
+
+<ul class="list-unstyled custom-menu">
     <li><a href="#">Home</a></li>
-    <li><a href="#">All Drivers</a></li>
-    <!-- Добавьте другие пункты меню здесь -->
+    <li><a href="#">All Positions</a></li>
+    <li><a href="#">All Task types</a></li>
+    <li><a href="#">All Tasks</a></li>
+    <li><a href="#">All Workers</a></li>
+
 </ul>
