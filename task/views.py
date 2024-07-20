@@ -4,6 +4,7 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
+from task.forms import TaskForm
 from task.models import Worker, Position, TaskType, Task
 
 
@@ -97,3 +98,29 @@ class TaskTypesCreateView(LoginRequiredMixin, generic.CreateView):
     template_name = "task/task_type_form.html"
     success_url = reverse_lazy("task:task-type-list")
 
+
+class TaskListView(LoginRequiredMixin, generic.ListView):
+    model = Task
+    context_object_name = "task_list"
+    template_name = "task/task_list.html"
+    paginate_by = 5
+
+
+class TaskCreateView(LoginRequiredMixin, generic.CreateView):
+    model = Task
+    form_class = TaskForm
+    template_name = "task/task_form.html"
+    success_url = reverse_lazy("task:task-list")
+
+
+class TaskUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = Task
+    form_class = TaskForm
+    template_name = "task/task_form.html"
+    success_url = reverse_lazy("task:task-list")
+
+
+class TaskDeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = Task
+    template_name = 'task/task_confirm_delete.html'
+    success_url = reverse_lazy("task:task-list")
