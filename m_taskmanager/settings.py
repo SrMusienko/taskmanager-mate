@@ -138,7 +138,6 @@ LOGOUT_REDIRECT_URL = 'index'
 
 AUTH_USER_MODEL = 'task.Worker'
 
-
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+    BASE_DIR / "static",
 ]
