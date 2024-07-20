@@ -6,7 +6,8 @@ from task.views import (
     PositionsDetailView,
     PositionsCreateView,
     PositionsDeleteView,
-    PositionsUpdateView
+    PositionsUpdateView, TaskTypesListView, TaskTypesDetailView, TaskTypesDeleteView,
+    TaskTypesUpdateView, TaskTypesCreateView
 )
 
 urlpatterns = [

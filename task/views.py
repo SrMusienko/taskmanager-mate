@@ -59,3 +59,41 @@ class PositionsUpdateView(LoginRequiredMixin, generic.UpdateView):
     fields = "__all__"
     success_url = reverse_lazy("task:position-list")
     template_name = "task/position_form.html"
+
+
+class TaskTypesListView(LoginRequiredMixin, generic.ListView):
+    model = TaskType
+    context_object_name = "task_type_list"
+    template_name = "task/task_type_list.html"
+    paginate_by = 5
+
+
+class TaskTypesDetailView(LoginRequiredMixin, generic.DetailView):
+    model = TaskType
+    template_name = "task/task_type_detail.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['tasks'] = Task.objects.filter(task_type=self.object)
+        return context
+
+
+class TaskTypesDeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = TaskType
+    success_url = reverse_lazy("task:task-type-list")
+    template_name = 'task/task_type_confirm_delete.html'
+
+
+class TaskTypesUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = TaskType
+    fields = "__all__"
+    success_url = reverse_lazy("task:task-type-list")
+    template_name = "task/task_type_form.html"
+
+
+class TaskTypesCreateView(LoginRequiredMixin, generic.CreateView):
+    model = TaskType
+    fields = "__all__"
+    template_name = "task/task_type_form.html"
+    success_url = reverse_lazy("task:task-type-list")
+

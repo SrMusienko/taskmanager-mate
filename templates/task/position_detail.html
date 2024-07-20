@@ -19,7 +19,7 @@
     {% for worker in position.worker_set.all %}
       <li><span>{{ worker}}</span></li>
     {% empty %}
-      <li>No workers with this position.</li>
+      <li><span>No workers with this position.</span></li>
     {% endfor %}
   </ul>
   <hr>
