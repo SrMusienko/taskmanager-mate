@@ -19,4 +19,7 @@
   {% else %}
     <p>There are no task types in task manager</p>
   {% endif %}
+  {% block pagination %}
+    {% include "includes/pagination.html" %}
+  {% endblock %}
 {% endblock %}

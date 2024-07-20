@@ -11,70 +11,87 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <style>
-        .sidebar {
-            background-color: #f8f9fa;
-            padding: 10px;
-        }
-        .sidebar-item {
-            cursor: pointer;
-            padding: 5px;
-        }
-        .user-info {
-            cursor: pointer;
-        }
-        .user-details, #menu-items {
-            display: none;
-            background-color: #f8f9fa;
-            padding: 10px;
-        }
-    </style>
+    <link rel="icon" href="{% static 'images/icon.ico' %}" type="image/x-icon">
+
 </head>
 <body>
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-2 sidebar">
-            <div class="sidebar-item" onclick="toggleMenu('user-details')">
-                {% if user.photo %}
-                    <img src="{{ user.photo.url }}" class="rounded-circle" alt="User Image" width="40" height="40">
-                {% else %}
-                    <img src="{% static 'images/default_user.png' %}" class="rounded-circle" alt="Default User Image" width="40" height="40">
-                {% endif %}
-                <span>{{ user.get_full_name }}</span>
-            </div>
-            <div id="user-details" class="user-details">
-                <p>Email: {{ user.email }}</p>
-                <p>Last login: {{ user.last_login }}</p>
-                <a href="{% url 'logout' %}" class="btn btn-danger btn-block">Logout</a>
-            </div>
+  <div class="row">
+      <div class="col-sm-2 sidebar">
+        <!--ЭТО ИНФОРМАЦИЯ О ПОЛЬЗОВАТЕЛЕ-->
+          <div class="sidebar-item" onclick="toggleMenu('user-details')" style="text-align: center; padding: 10px;">
+              {% if user.photo %}
+                  <img src="{{ user.photo.url }}" class="rounded-circle" alt="User Image" width="70" height="70">
+              {% else %}
+                  <img src="{% static 'images/default_user.png' %}" class="rounded-circle" alt="Default User Image" width="70" height="70">
+              {% endif %}
+              <br>
+              <span>{{ user.username }}</span>
+          </div>
+          
+          <div id="user-details" class="user-details" style="text-align: center; padding: 10px; display: none;">
+              <form method="post" action="{% url 'logout' %}" style="margin-bottom: 10px;">
+                  {% csrf_token %}
+                  <button type="submit" class="btn btn-primary">Logout</button>
+              </form>
+              <p><span>First name:</span> {{ user.first_name }}</p>
+              <p><span>Last name:</span> {{ user.last_name }}</p>
+              <p><span>Email:</span> {{ user.email }}</p>
+          </div>
+
+        <!--ЭТО МЕНЮХА -->
             <div class="sidebar-item" onclick="toggleMenu('menu-items')">
                 <i class="fas fa-bars"></i> Menu
             </div>
+        
             <div id="menu-items">
                 {% block sidebar %}
                     {% include "includes/sidebar.html" %}
                 {% endblock %}
             </div>
         </div>
-        <div class="col-sm-10">
-            <div class="d-flex justify-content-between align-items-center">
-                <div>
-                    <h1>Welcome, {{ user.username }}</h1>
+    
+    <!--ЭТО БЛОК ДЛЯ ОСНОВНОГО КОНТЕНТА -->
+          <div class="col-sm-10">
+            <div class="header-wrapper">
+                <div class="d-flex justify-content-between align-items-center custom-header">
+                    <div class="d-flex align-items-center">
+                        <img src="{% static 'images/taskmanager_logo.png' %}" alt="TaskManager Logo" width="50" height="50" class="mr-3">
+                        <h1 class="taskmanager-title">TaskManager</h1>
+                    </div>
                 </div>
             </div>
-            {% block content %}{% endblock %}
-        </div>
+            <div class="content-wrapper mt-4 p-4 bg-light border">
+                {% block content %}{% endblock %}
+            </div>
+          </div>
+  
+    
     </div>
 </div>
 <script>
-    function toggleMenu(id) {
-        var element = document.getElementById(id);
-        if (element.style.display === "none") {
-            element.style.display = "block";
-        } else {
-            element.style.display = "none";
-        }
+  function toggleMenu(id) {
+    var element = document.getElementById(id);
+    if (element.style.display === "none") {
+        element.style.display = "block";
+        localStorage.setItem(id, "block");
+    } else {
+        element.style.display = "none";
+        localStorage.setItem(id, "none");
     }
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    var menuState = localStorage.getItem('menu-items');
+    if (menuState) {
+      document.getElementById('menu-items').style.display = menuState;
+    }
+
+    var userDetailsState = localStorage.getItem('user-details');
+    if (userDetailsState) {
+      document.getElementById('user-details').style.display = userDetailsState;
+    }
+  });
 </script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>

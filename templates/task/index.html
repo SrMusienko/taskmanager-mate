@@ -1,7 +1,18 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Taxi Service Home</h1>
-{{ worker.photo }}
-  {{ worker.first_name}}
+    <h1>Task manager app Home page</h1>
+    <p>"Welcome to TaskMaster! 🚀 Ready to conquer your day? Let's turn those tasks into triumphs!"</p>
+    <h2>Dynamic content</h2>
+    <p>The Taxi service has the following record counts:</p>
+    <ul>
+        <li><strong>Positions:</strong> {{ num_positions }}</li>
+        <li><strong>Task types:</strong> {{ num_task_type }}</li>
+        <li><strong>Tasks:</strong> {{ num_tasks }}</li>
+        <li><strong>Workers:</strong> {{ workers }}</li>
+    </ul>
+
+    <p>You have visited this page
+        {{ num_visits }} time{{ num_visits|pluralize }}.
+    </p>
 {% endblock %}
