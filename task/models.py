@@ -24,7 +24,6 @@ class TaskType(models.Model):
 
 class Worker(AbstractUser):
     username = models.CharField(max_length=255, unique=True)
-    password = models.CharField(max_length=255)
     position = models.ForeignKey(Position, on_delete=models.CASCADE, null=True, blank=True)
     email = models.EmailField(unique=True)
     first_name = models.CharField(max_length=255)
