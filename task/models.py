@@ -25,9 +25,9 @@ class TaskType(models.Model):
 class Worker(AbstractUser):
     username = models.CharField(max_length=255, unique=True)
     position = models.ForeignKey(Position, on_delete=models.CASCADE, null=True, blank=True)
-    email = models.EmailField(unique=True)
-    first_name = models.CharField(max_length=255)
-    last_name = models.CharField(max_length=255)
+    email = models.EmailField(unique=True, null=True, blank=True)
+    first_name = models.CharField(max_length=255, null=True, blank=True)
+    last_name = models.CharField(max_length=255, null=True, blank=True)
     photo = models.ImageField(upload_to='photos/', null=True, blank=True)
 
     class Meta:
