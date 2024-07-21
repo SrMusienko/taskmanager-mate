@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center my-3">
+      <h1 class="text-center flex-grow-1">Task List</h1>
+      <a href="{% url 'task:worker-create' %}" class="btn btn-primary link-to-page">
+        Create
+      </a>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th>UserName</th>
+            <th>pos</th>
+            <th>email</th>
+            <th>photo</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for worker in worker_list %}
+            <tr>
+              <td>{{ worker }}</td>
+              <td>{{ worker.position }}</td>
+              <td>{{ worker.email }}</td>
+              <td>
+                {% if worker.photo %}
+                  <img src="{{ worker.photo.url }}" class="rounded-circle" alt="No photo" style="width: 100px; height: 100px;">
+                {% else %}
+                  <img src="{% static 'images/default_user.png' %}" alt="No photo" class="rounded-circle" style="width: 100px; height: 100px;">
+                {% endif %}
+              </td>
+              <td>
+                <a href="{% url 'task:worker-update' pk=worker.id %}" class="btn btn-secondary link-to-page mb-1" style="width: 80px;">Update</a><br>
+                <a href="{% url "task:worker-delete" pk=worker.id %}" class="btn btn-danger link-to-page" style="width: 80px;">Delete</a>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% block pagination %}
+      {% include "includes/pagination.html" %}
+    {% endblock %}
+  </div>
+{% endblock %}
