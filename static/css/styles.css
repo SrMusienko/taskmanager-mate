@@ -20,12 +20,14 @@
 }
 .user-details p {
     margin: 5px 0;
+
 }
 
 .user-details {
     border-top: 1px solid #ccc;
     padding-top: 10px;
     margin-top: 10px;
+    text-align: left;
 }
 .custom-menu {
     text-align: center; /* Центрируем меню */

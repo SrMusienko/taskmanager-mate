@@ -1,6 +1,8 @@
 from django import forms
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from django.core.exceptions import ValidationError
+
 from task.models import Worker, Task
 
 
@@ -29,9 +31,21 @@ class TaskForm(forms.ModelForm):
 
 
 class WorkerForm(forms.ModelForm):
+
     class Meta:
         model = Worker
         fields = ["username", "first_name", "last_name", "email", "position", "photo"]
+        widgets = {
+            'photo': forms.ClearableFileInput(attrs={'multiple': False})
+        }
+
+    def clean_photo(self):
+        photo = self.cleaned_data.get('photo')
+        if photo:
+            max_size = 5 * 1024 * 1024  # 5 MB
+            if photo.size > max_size:
+                raise ValidationError('The maximum file size allowed is 5 MB.')
+        return photo
 
 
 class CustomUserCreationForm(UserCreationForm):
@@ -53,3 +67,46 @@ class CustomUserCreationForm(UserCreationForm):
             user.save()
 
         return user
+
+
+# --------search forms---------------
+
+class SearchForm(forms.Form):
+    name = forms.CharField(
+        max_length=255,
+        required=False,
+        label="",
+        widget=forms.TextInput(
+            attrs={
+                "placeholder": "Search by name",
+            }
+        )
+    )
+
+
+class TaskSearchForm(forms.Form):
+    data = forms.CharField(
+        max_length=255,
+        required=False,
+        label="",
+        widget=forms.TextInput(
+            attrs={
+                "placeholder": "Search by name and description",
+                "style": "width: 300px;"
+            }
+        )
+    )
+
+
+class WorkerSearchForm(forms.Form):
+    data = forms.CharField(
+        max_length=255,
+        required=False,
+        label="",
+        widget=forms.TextInput(
+            attrs={
+                "placeholder": "Search by name and position",
+                "style": "width: 300px;"
+            }
+        )
+    )

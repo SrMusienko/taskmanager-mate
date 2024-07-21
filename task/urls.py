@@ -24,7 +24,6 @@ from task.views import (
 
 urlpatterns = [
     path("", index, name="index"),
-
     path("positions/", PositionsListView.as_view(), name="position-list"),
     path("positions/<int:pk>/", PositionsDetailView.as_view(), name="position-detail"),
     path("positions/create/", PositionsCreateView.as_view(), name="position-create"),

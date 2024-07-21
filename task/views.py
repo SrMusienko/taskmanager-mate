@@ -1,11 +1,11 @@
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.db.models import Q
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
-from task.forms import TaskForm, WorkerForm, CustomUserCreationForm
+from task.forms import TaskForm, WorkerForm, CustomUserCreationForm, SearchForm, TaskSearchForm, WorkerSearchForm
 from task.models import Worker, Position, TaskType, Task
 
 
@@ -32,7 +32,22 @@ class PositionsListView(LoginRequiredMixin, generic.ListView):
     model = Position
     context_object_name = "position_list"
     template_name = "task/position_list.html"
-    paginate_by = 3
+    paginate_by = 5
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(PositionsListView, self).get_context_data(**kwargs)
+        name = self.request.GET.get("name", "")
+        context["search_form"] = SearchForm(
+            initial={"name": name},
+        )
+        return context
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        form = SearchForm(self.request.GET)
+        if form.is_valid():
+            return queryset.filter(name__icontains=form.cleaned_data["name"])
+        return queryset
 
 
 class PositionsCreateView(LoginRequiredMixin, generic.CreateView):
@@ -69,7 +84,22 @@ class TaskTypesListView(LoginRequiredMixin, generic.ListView):
     model = TaskType
     context_object_name = "task_type_list"
     template_name = "task/task_type_list.html"
-    paginate_by = 3
+    paginate_by = 5
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(TaskTypesListView, self).get_context_data(**kwargs)
+        name = self.request.GET.get("name", "")
+        context["search_form"] = SearchForm(
+            initial={"name": name},
+        )
+        return context
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        form = SearchForm(self.request.GET)
+        if form.is_valid():
+            return queryset.filter(name__icontains=form.cleaned_data["name"])
+        return queryset
 
 
 class TaskTypesDetailView(LoginRequiredMixin, generic.DetailView):
@@ -110,8 +140,23 @@ class TaskListView(LoginRequiredMixin, generic.ListView):
     template_name = "task/task_list.html"
     paginate_by = 3
 
-    def get_queryset(self):  # template may contain non-optimal data
-        return Task.objects.prefetch_related('assigned_to')
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(TaskListView, self).get_context_data(**kwargs)
+        data = self.request.GET.get("data", "")
+        context["search_form"] = TaskSearchForm(
+            initial={"data": data},
+        )
+        return context
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        form = TaskSearchForm(self.request.GET)
+        if form.is_valid():
+            data = form.cleaned_data["data"]
+            queryset = queryset.filter(
+                Q(name__icontains=data) | Q(description__icontains=data)
+            )
+        return queryset.prefetch_related("assigned_to")
 
 
 class TaskCreateView(LoginRequiredMixin, generic.CreateView):
@@ -141,6 +186,27 @@ class WorkersListView(LoginRequiredMixin, generic.ListView):
     context_object_name = "worker_list"
     template_name = "task/worker_list.html"
     paginate_by = 3
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(WorkersListView, self).get_context_data(**kwargs)
+        data = self.request.GET.get("data", "")
+        context["search_form"] = WorkerSearchForm(
+            initial={"data": data},
+        )
+        return context
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        form = WorkerSearchForm(self.request.GET)
+        if form.is_valid():
+            data = form.cleaned_data["data"]
+            queryset = queryset.filter(
+                Q(username__icontains=data) |
+                Q(first_name__icontains=data) |
+                Q(last_name__icontains=data) |
+                Q(position__name__icontains=data)
+            )
+        return queryset
 
 
 class WorkersCreateView(LoginRequiredMixin, generic.CreateView):

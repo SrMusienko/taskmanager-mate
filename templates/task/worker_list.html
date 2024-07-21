@@ -2,13 +2,15 @@
 {% load static %}
 
 {% block content %}
+  {% include "includes/search.html" %}
   <div class="container">
     <div class="d-flex justify-content-between align-items-center my-3">
-      <h1 class="text-center flex-grow-1">Task List</h1>
+      <h1 class="text-center flex-grow-1">Worker List</h1>
       <a href="{% url 'task:worker-create' %}" class="btn btn-primary link-to-page">
         Create
       </a>
     </div>
+    {% if worker_list %}
     <div class="table-responsive">
       <table class="table table-striped table-bordered">
         <thead class="thead-dark">
@@ -45,5 +47,9 @@
     {% block pagination %}
       {% include "includes/pagination.html" %}
     {% endblock %}
+    {% else %}  
+       <p>There are no workers in task manager</p>
+    {% endif %}
+    
   </div>
 {% endblock %}

@@ -34,9 +34,11 @@
                   {% csrf_token %}
                   <button type="submit" class="btn btn-primary">Logout</button>
               </form>
-              <p><span>First name:</span> {{ user.first_name }}</p>
+            <div style="text-align: left;">
+              <p><span >First name:</span> {{ user.first_name }}</p>
               <p><span>Last name:</span> {{ user.last_name }}</p>
               <p><span>Email:</span> {{ user.email }}</p>
+            </div>
           </div>
 
         <!--ЭТО МЕНЮХА -->
