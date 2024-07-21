@@ -4,7 +4,6 @@
   <h1>Delete worker {{ object }}?</h1>
   <form action="" method="post">
     {% csrf_token %}
-
     <input type="submit" value="Yes" class="btn btn-danger" style="width: 80px;">
     <a href="{% url 'task:worker-list' %}" class="btn btn-secondary">Cancel</a>
   </form>

@@ -1,12 +1,10 @@
 {% extends "base.html" %}
-
 {% block content %}
   <h1>
     {{ tasktype.name }}
     <a href="{% url 'task:task-type-delete' pk=tasktype.id %}" class="btn btn-danger link-to-page">
       Delete
     </a>
-
     <a href="{% url 'task:task-type-update' pk=tasktype.id %}" class="btn btn-secondary link-to-page">
       Update
     </a>
@@ -22,5 +20,4 @@
       <li><span>No tasks of this type.</span></li>
     {% endfor %}
   </ul>
- 
 {% endblock %}
