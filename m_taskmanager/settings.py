@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 import os
+
+import dj_database_url
 from dotenv import load_dotenv
 from pathlib import Path
 
@@ -86,7 +88,9 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+DATABASE_URL = os.getenv('DATABASE_URL')
 
+DATABASES['default'] = dj_database_url.parse(DATABASE_URL)
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
