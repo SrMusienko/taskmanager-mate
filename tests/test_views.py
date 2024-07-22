@@ -4,7 +4,7 @@ from django.contrib.auth import get_user_model
 from task.models import Worker, Position, TaskType, Task
 
 
-class WorkerListViewTest(TestCase):
+class AuthTestCase(TestCase):
     def setUp(self):
         self.admin_user = get_user_model().objects.create_superuser(
             username="admin",
@@ -12,6 +12,10 @@ class WorkerListViewTest(TestCase):
         )
         self.client.force_login(self.admin_user)
 
+
+class WorkerListViewTest(AuthTestCase):
+    def setUp(self):
+        super().setUp()
         self.position = Position.objects.create(name="Manager")
         self.worker1 = Worker.objects.create(
             username="worker1",
@@ -68,14 +72,9 @@ class WorkerListViewTest(TestCase):
 
 # -------------------Task-------------
 
-class TaskListViewTest(TestCase):
+class TaskListViewTest(AuthTestCase):
     def setUp(self):
-        self.admin_user = get_user_model().objects.create_superuser(
-            username="admin",
-            password="admin",
-        )
-        self.client.force_login(self.admin_user)
-
+        super().setUp()
         self.task_type = TaskType.objects.create(name="Bug Fix")
         self.task1 = Task.objects.create(
             name="Fix login issue",
@@ -132,14 +131,9 @@ class TaskListViewTest(TestCase):
 
 # -------------------TaskType-------------
 
-class TaskTypeListViewTest(TestCase):
+class TaskTypeListViewTest(AuthTestCase):
     def setUp(self):
-        self.admin_user = get_user_model().objects.create_superuser(
-            username="admin",
-            password="admin",
-        )
-        self.client.force_login(self.admin_user)
-
+        super().setUp()
         self.task_type1 = TaskType.objects.create(name="Bug Fix")
         self.task_type2 = TaskType.objects.create(name="Feature Development")
         self.task_type3 = TaskType.objects.create(name="Maintenance")
@@ -164,17 +158,17 @@ class TaskTypeListViewTest(TestCase):
         url = reverse("task:task-type-list")
         response = self.client.get(url, {"name": "Nonexistent"})
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, "There are no task types in task manager")
+        self.assertContains(
+            response,
+            "There are no task types in task manager"
+        )
 
 
 # ------------Position---------------
 
-class PositionListViewTest(TestCase):
+class PositionListViewTest(AuthTestCase):
     def setUp(self):
-        self.admin_user = get_user_model().objects.create_superuser(
-            username="admin",
-            password="admin",
-        )
+        super().setUp()
         self.client.force_login(self.admin_user)
 
         self.position1 = Position.objects.create(name="Manager")

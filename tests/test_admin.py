@@ -15,7 +15,6 @@ class AdminPanelTest(TestCase):
         )
         self.client.force_login(self.admin_user)
 
-        # Создание объектов
         self.position = Position.objects.create(
             name="Test position",
         )
@@ -24,7 +23,7 @@ class AdminPanelTest(TestCase):
         )
         self.worker = get_user_model().objects.create_user(
             username="Test",
-            email="test@example.com",  # Укажите уникальный email
+            email="test@example.com",
             password="Test123",
             first_name="Test first",
             last_name="Test last",
