@@ -21,10 +21,13 @@ from django.urls import path, include
 from task.views import index, WorkersCreateView
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("admin/", admin.site.urls),
     path("", include("task.urls", namespace="task")),
     path("accounts/", include("django.contrib.auth.urls")),
     path("", index, name="index"),
 ]
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(
+        settings.MEDIA_URL,
+        document_root=settings.MEDIA_ROOT
+    )

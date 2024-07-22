@@ -139,5 +139,5 @@ LOGOUT_REDIRECT_URL = 'index'
 AUTH_USER_MODEL = 'task.Worker'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    BASE_DIR / 'static',
 ]
