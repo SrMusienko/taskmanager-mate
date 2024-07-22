@@ -9,6 +9,10 @@
         Create
       </a>
     </div>
+    <div class="sort-links">
+      <a href="?sort=username" class="{% if current_sort == 'username' %}active{% endif %}">Sort by Username</a> |
+      <a href="?sort=position__name" class="{% if current_sort == 'position__name' %}active{% endif %}">Sort by Position</a>
+    </div>
     {% if worker_list %}
     <div class="table-responsive">
       <table class="table table-striped table-bordered">

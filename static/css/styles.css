@@ -110,3 +110,8 @@ span {
 .btn {
   width: 80px;
 }
+
+.sort-links a.active {
+font-weight: bold;
+text-decoration: underline;
+}

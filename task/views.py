@@ -190,9 +190,11 @@ class WorkersListView(LoginRequiredMixin, generic.ListView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(WorkersListView, self).get_context_data(**kwargs)
         data = self.request.GET.get("data", "")
+        sort = self.request.GET.get("sort", "")
         context["search_form"] = WorkerSearchForm(
             initial={"data": data},
         )
+        context["current_sort"] = sort
         return context
 
     def get_queryset(self):
@@ -206,6 +208,9 @@ class WorkersListView(LoginRequiredMixin, generic.ListView):
                 Q(last_name__icontains=data) |
                 Q(position__name__icontains=data)
             )
+        sort = self.request.GET.get("sort", "")
+        if sort:
+            queryset = queryset.order_by(sort)
         return queryset
 
 
