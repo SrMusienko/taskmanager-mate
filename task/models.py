@@ -24,11 +24,16 @@ class TaskType(models.Model):
 
 class Worker(AbstractUser):
     username = models.CharField(max_length=255, unique=True)
-    position = models.ForeignKey(Position, on_delete=models.CASCADE, null=True, blank=True)
+    position = models.ForeignKey(
+        Position,
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True
+    )
     email = models.EmailField(unique=True, null=True, blank=True)
     first_name = models.CharField(max_length=255, null=True, blank=True)
     last_name = models.CharField(max_length=255, null=True, blank=True)
-    photo = models.ImageField(upload_to='photos/', null=True, blank=True)
+    photo = models.ImageField(upload_to="photos/", null=True, blank=True)
 
     class Meta:
         verbose_name = "worker"
@@ -51,7 +56,11 @@ class Task(models.Model):
     description = models.TextField()
     deadline = models.DateField()
     is_completed = models.BooleanField(default=False)
-    priority = models.CharField(max_length=15, choices=CHOICES, default="Urgent")
+    priority = models.CharField(
+        max_length=15,
+        choices=CHOICES,
+        default="Urgent"
+    )
     task_type = models.ForeignKey(TaskType, on_delete=models.CASCADE)
     assigned_to = models.ManyToManyField(Worker)
     created_at = models.DateTimeField(auto_now_add=True)

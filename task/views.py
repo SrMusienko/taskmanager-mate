@@ -5,8 +5,20 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
-from task.forms import TaskForm, WorkerForm, CustomUserCreationForm, SearchForm, TaskSearchForm, WorkerSearchForm
-from task.models import Worker, Position, TaskType, Task
+from task.forms import (
+    CustomUserCreationForm,
+    SearchForm,
+    TaskForm,
+    TaskSearchForm,
+    WorkerForm,
+    WorkerSearchForm
+)
+from task.models import (
+    Position,
+    Task,
+    TaskType,
+    Worker
+)
 
 
 @login_required
@@ -21,7 +33,7 @@ def index(request):
         "num_positions": num_positions,
         "num_task_type": num_task_type,
         "num_tasks": num_tasks,
-        'workers': workers,
+        "workers": workers,
         "num_visits": num_visits + 1,
     }
 
@@ -62,13 +74,13 @@ class PositionsDetailView(LoginRequiredMixin, generic.DetailView):
     template_name = "task/position_detail.html"
 
     def get_queryset(self):
-        return super().get_queryset().prefetch_related('worker_set')
+        return super().get_queryset().prefetch_related("worker_set")
 
 
 class PositionsDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Position
     success_url = reverse_lazy("task:position-list")
-    template_name = 'task/position_confirm_delete.html'
+    template_name = "task/position_confirm_delete.html"
 
 
 class PositionsUpdateView(LoginRequiredMixin, generic.UpdateView):
@@ -108,14 +120,14 @@ class TaskTypesDetailView(LoginRequiredMixin, generic.DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['tasks'] = Task.objects.filter(task_type=self.object)
+        context["tasks"] = Task.objects.filter(task_type=self.object)
         return context
 
 
 class TaskTypesDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = TaskType
     success_url = reverse_lazy("task:task-type-list")
-    template_name = 'task/task_type_confirm_delete.html'
+    template_name = "task/task_type_confirm_delete.html"
 
 
 class TaskTypesUpdateView(LoginRequiredMixin, generic.UpdateView):
@@ -175,7 +187,7 @@ class TaskUpdateView(LoginRequiredMixin, generic.UpdateView):
 
 class TaskDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Task
-    template_name = 'task/task_confirm_delete.html'
+    template_name = "task/task_confirm_delete.html"
     success_url = reverse_lazy("task:task-list")
 
 
@@ -203,9 +215,9 @@ class WorkersListView(LoginRequiredMixin, generic.ListView):
         if form.is_valid():
             data = form.cleaned_data["data"]
             queryset = queryset.filter(
-                Q(username__icontains=data) |
-                Q(first_name__icontains=data) |
-                Q(last_name__icontains=data) |
+                Q(username__icontains=data) |  # noqa: W504
+                Q(first_name__icontains=data) |  # noqa: W504
+                Q(last_name__icontains=data) |  # noqa: W504
                 Q(position__name__icontains=data)
             )
         sort = self.request.GET.get("sort", "")
@@ -230,5 +242,5 @@ class WorkersUpdateView(LoginRequiredMixin, generic.UpdateView):
 
 class WorkersDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Worker
-    template_name = 'task/worker_confirm_delete.html'
+    template_name = "task/worker_confirm_delete.html"
     success_url = reverse_lazy("task:worker-list")
