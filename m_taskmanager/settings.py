@@ -152,18 +152,20 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = 'staticfiles'
-DROPBOX_ACCESS_TOKEN = os.getenv('DROPBOX_ACCESS_TOKEN')
+
+DROPBOX_OAUTH2_TOKEN = os.getenv('DROPBOX_ACCESS_TOKEN')
 DROPBOX_APP_KEY = os.getenv('DROPBOX_APP_KEY')
 DROPBOX_APP_SECRET = os.getenv('DROPBOX_APP_SECRET')
-DROPBOX_REFRESH_TOKEN = os.getenv('DROPBOX_REFRESH_TOKEN')
+DROPBOX_OAUTH2_REFRESH_TOKEN = os.getenv('DROPBOX_REFRESH_TOKEN')
+
 STORAGES = {
     "default": {
         "BACKEND": "storages.backends.dropbox.DropboxStorage",
         "OPTIONS": {
-            "oauth2_access_token": DROPBOX_ACCESS_TOKEN,
-            "oauth2_refresh_token": DROPBOX_REFRESH_TOKEN,
-            "app_secret": DROPBOX_APP_SECRET,
+            "oauth2_access_token": DROPBOX_OAUTH2_TOKEN,
             "app_key": DROPBOX_APP_KEY,
+            "app_secret": DROPBOX_APP_SECRET,
+            "oauth2_refresh_token": DROPBOX_OAUTH2_REFRESH_TOKEN,
             "root_path": "/TaskManager/"
         },
     },
