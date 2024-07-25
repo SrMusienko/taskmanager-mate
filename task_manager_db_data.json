@@ -1,0 +1,1207 @@
+[
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2024-07-19T19:26:07.398Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "1",
+        "object_repr": "Designer",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2024-07-19T19:26:23.307Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "2",
+        "object_repr": "Developer",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2024-07-19T19:26:37.287Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "3",
+        "object_repr": "QA",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2024-07-19T19:26:43.474Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "4",
+        "object_repr": "Project manager",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2024-07-19T19:27:00.663Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "5",
+        "object_repr": "DevOps",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2024-07-19T19:27:36.148Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "1",
+        "object_repr": "Bag",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2024-07-19T19:27:44.786Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "2",
+        "object_repr": "New fearure",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2024-07-19T19:27:54.455Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "3",
+        "object_repr": "Breaking change",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2024-07-19T19:28:03.217Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "Refactiring",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2024-07-19T19:28:09.789Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "5",
+        "object_repr": "QA",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2024-07-19T19:30:15.776Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "1",
+        "object_repr": "fix bag on site mate-academy (Urgent)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2024-07-19T19:30:52.875Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "2",
+        "object_repr": "SerMus (Sergii Musiienko)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2024-07-19T19:31:28.885Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "3",
+        "object_repr": "Zelensky (Volodimir Zelensky)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2024-07-19T19:32:09.292Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "4",
+        "object_repr": "Droh (Danilo Roh)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2024-07-21T06:57:29.878Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "5",
+        "object_repr": "qwer (qwer wee)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 2,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 3,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 4,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 4,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 4,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 4,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 5,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 5,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 5,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 5,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add position",
+        "content_type": 6,
+        "codename": "add_position"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change position",
+        "content_type": 6,
+        "codename": "change_position"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete position",
+        "content_type": 6,
+        "codename": "delete_position"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view position",
+        "content_type": 6,
+        "codename": "view_position"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add task type",
+        "content_type": 7,
+        "codename": "add_tasktype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change task type",
+        "content_type": 7,
+        "codename": "change_tasktype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete task type",
+        "content_type": 7,
+        "codename": "delete_tasktype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view task type",
+        "content_type": 7,
+        "codename": "view_tasktype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add worker",
+        "content_type": 8,
+        "codename": "add_worker"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change worker",
+        "content_type": 8,
+        "codename": "change_worker"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete worker",
+        "content_type": 8,
+        "codename": "delete_worker"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view worker",
+        "content_type": 8,
+        "codename": "view_worker"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add task",
+        "content_type": 9,
+        "codename": "add_task"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change task",
+        "content_type": 9,
+        "codename": "change_task"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete task",
+        "content_type": 9,
+        "codename": "delete_task"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view task",
+        "content_type": 9,
+        "codename": "view_task"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "task",
+        "model": "position"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "task",
+        "model": "tasktype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "task",
+        "model": "worker"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "task",
+        "model": "task"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "i841r1182pry6wlmm11n49hifrgllax5",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQBe_iGln-xD9Kes5grXdtHEC2FCcV4u4QKQW0b2bei0XY1hq3kZc4EzszyU6_WwJ85LYDukO7dY69rcuc-K7wgw5-7ZSfl8P9O6gw6rcGn8BhsBS8VkrqYouVTgvjhLA0Ze9KQOuFDcYgYSBEUHlyCYhAJcneH9J7OA0:1sVWzn:tms5hrEEXPx8wyaSIOdOx2hq2-JsAGqIvgMgcqMshRI",
+        "expire_date": "2024-08-04T13:53:03.091Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "v4e5zl47nqat16wvsfaz3o4sqgq96vzy",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQAP-FsyGwbQF79O43kIVdLT4gKcWL8d8NSQ96nZnMW3hs2-Jb5dUnErNw4vDLAsY75y7ohvlaZCx5W1OQPZG7rfJciB-nvf0bLFiXvtWAZuQwqMjRajJ8UQQKIqNTgUy0VgcNRpEOR0c0ATCPPJhBwWSwT3N7-leqaati1uPnC6OWPXg:1sVlg4:cfFm-f63iJAP27D8ojAEUnwVr9a0AuS1eU5n-KDozCk",
+        "expire_date": "2024-08-05T05:33:40.151Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "yjt1jmosgqr6bl1dypjwa5oailvpc680",
+    "fields": {
+        "session_data": ".eJxVjs0OgyAQhN-Fc0MQdQGPvfsMZNnFSn8gEe2l6bu3Jh7a63zfTOYlPG7r7LcaF59YDKIRp98sIN1i3gFfMV-KpJLXJQW5K_KgVY6F4_18uH8DM9b520Yb0JADdrbVumknmKAxreqNUsBdtGZyBFaB63tickyEOnYmIDPqsL_K28M_U01rFQO8P0NoPT4:1sVcp9:1IWWD82iq1jQ-tOoxLsjZW_dEZLLj5slVJHiZFp9Y_w",
+        "expire_date": "2024-08-04T20:06:27.162Z"
+    }
+},
+{
+    "model": "task.position",
+    "pk": 2,
+    "fields": {
+        "name": "Developer"
+    }
+},
+{
+    "model": "task.position",
+    "pk": 3,
+    "fields": {
+        "name": "QA"
+    }
+},
+{
+    "model": "task.position",
+    "pk": 4,
+    "fields": {
+        "name": "Project manager"
+    }
+},
+{
+    "model": "task.position",
+    "pk": 5,
+    "fields": {
+        "name": "DevOps"
+    }
+},
+{
+    "model": "task.position",
+    "pk": 7,
+    "fields": {
+        "name": "Software Engineer"
+    }
+},
+{
+    "model": "task.position",
+    "pk": 8,
+    "fields": {
+        "name": "Frontend Developer"
+    }
+},
+{
+    "model": "task.position",
+    "pk": 9,
+    "fields": {
+        "name": "Backend Developer"
+    }
+},
+{
+    "model": "task.position",
+    "pk": 10,
+    "fields": {
+        "name": "Data Scientist"
+    }
+},
+{
+    "model": "task.position",
+    "pk": 11,
+    "fields": {
+        "name": "Systems Analyst"
+    }
+},
+{
+    "model": "task.position",
+    "pk": 12,
+    "fields": {
+        "name": "UX/UI Designer"
+    }
+},
+{
+    "model": "task.position",
+    "pk": 13,
+    "fields": {
+        "name": "Security Analyst"
+    }
+},
+{
+    "model": "task.position",
+    "pk": 14,
+    "fields": {
+        "name": "Cloud Engineer"
+    }
+},
+{
+    "model": "task.tasktype",
+    "pk": 1,
+    "fields": {
+        "name": "Bag"
+    }
+},
+{
+    "model": "task.tasktype",
+    "pk": 2,
+    "fields": {
+        "name": "New fearure"
+    }
+},
+{
+    "model": "task.tasktype",
+    "pk": 3,
+    "fields": {
+        "name": "Breaking change"
+    }
+},
+{
+    "model": "task.tasktype",
+    "pk": 4,
+    "fields": {
+        "name": "Refactiring"
+    }
+},
+{
+    "model": "task.tasktype",
+    "pk": 5,
+    "fields": {
+        "name": "QA"
+    }
+},
+{
+    "model": "task.tasktype",
+    "pk": 7,
+    "fields": {
+        "name": "Bug Fix"
+    }
+},
+{
+    "model": "task.tasktype",
+    "pk": 8,
+    "fields": {
+        "name": "Feature Enhancement"
+    }
+},
+{
+    "model": "task.tasktype",
+    "pk": 9,
+    "fields": {
+        "name": "Code Refactoring"
+    }
+},
+{
+    "model": "task.tasktype",
+    "pk": 10,
+    "fields": {
+        "name": "Performance Optimization"
+    }
+},
+{
+    "model": "task.tasktype",
+    "pk": 11,
+    "fields": {
+        "name": "Security Update"
+    }
+},
+{
+    "model": "task.tasktype",
+    "pk": 12,
+    "fields": {
+        "name": "System Integration"
+    }
+},
+{
+    "model": "task.tasktype",
+    "pk": 13,
+    "fields": {
+        "name": "Technical Debt"
+    }
+},
+{
+    "model": "task.tasktype",
+    "pk": 14,
+    "fields": {
+        "name": "User Interface (UI) Design"
+    }
+},
+{
+    "model": "task.tasktype",
+    "pk": 15,
+    "fields": {
+        "name": "API Development"
+    }
+},
+{
+    "model": "task.tasktype",
+    "pk": 16,
+    "fields": {
+        "name": "Database Migration"
+    }
+},
+{
+    "model": "task.worker",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$4c8A8mlFva9VbrIlik3XxX$dEXaeNRp3HNuZKun5O6ZprI2veuzo88/ivkklDlNYoA=",
+        "last_login": "2024-07-21T15:24:20.771Z",
+        "is_superuser": true,
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-07-19T19:23:39.279Z",
+        "username": "admin",
+        "position": null,
+        "email": "admin@admin.com",
+        "first_name": "",
+        "last_name": "",
+        "photo": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "task.worker",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$Monz4M0eNskajj6qAmboD4$dFKo6LFRU508y1b3hLS72lVi/ewFsHkDkh4IYXaLyak=",
+        "last_login": null,
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-07-19T19:30:51.940Z",
+        "username": "SerMus",
+        "position": 5,
+        "email": "qwe@do.com",
+        "first_name": "Sergii",
+        "last_name": "Musiienko",
+        "photo": "photos/avatar-gene9.jpg",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "task.worker",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$BUQNDLllpXmM8m2ktXkrzH$R2f7m5DXSJLJV3zx6R4r/Z2mpPcvExjIAC2HIvt20mU=",
+        "last_login": "2024-07-21T13:54:44.683Z",
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-07-19T19:31:27.812Z",
+        "username": "Zelensky",
+        "position": 4,
+        "email": "Zela@yandex.com",
+        "first_name": "Volodimir",
+        "last_name": "Zelensky",
+        "photo": "photos/avatar-gen2.jpg",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "task.worker",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$2X9BA7QxIMcZhAXDEFar6L$2u4NwY02XR3NclvZOz9oKBZLEgQHT2nIIlmX8wH2lQ0=",
+        "last_login": null,
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-07-19T19:32:08.304Z",
+        "username": "Droh",
+        "position": 4,
+        "email": "damili@gmail.com",
+        "first_name": "Danilo",
+        "last_name": "Roh",
+        "photo": "photos/avatar-gen1.jpg",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "task.worker",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$Kl3H53HkficxQcpKdNgidv$hRXXcAXq1OywFYGCi2LOFBBkia1MxKgj/TpdTl1N3aM=",
+        "last_login": null,
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-07-21T08:24:07.479Z",
+        "username": "VolSuisk",
+        "position": 3,
+        "email": "sus@do.com",
+        "first_name": "Volodimir",
+        "last_name": "Suiskiy",
+        "photo": "photos/avatar-gen3.jpg",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "task.worker",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$BDBj51MEx3TDMwKuyGNhYR$OQAqptEuNbSTDaLbYqcqUS8rX3v4ohNv+9ujkwAfkos=",
+        "last_login": null,
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-07-21T14:12:10.573Z",
+        "username": "ZinA",
+        "position": 13,
+        "email": "ZinA@gmail.ua",
+        "first_name": "Bogdan",
+        "last_name": "Zinchenko",
+        "photo": "photos/avatar-gen8.jpg",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "task.worker",
+    "pk": 8,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$C54L11SbhVjkH5uGX4U9fT$fTuaUoLpK72HtA0QyaRTXY/kYdABaob+Ebow04PyKFE=",
+        "last_login": "2024-07-21T16:59:17.641Z",
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-07-21T14:13:50.584Z",
+        "username": "PavloKrakovych",
+        "position": 8,
+        "email": "Pavlo_Krakovych@ua.ua",
+        "first_name": "Pavlo",
+        "last_name": "Krakovych",
+        "photo": "photos/avatar-gen7.jpg",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "task.worker",
+    "pk": 9,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$wkXyocp78fX11kTl4AOe7A$g4ta6LFGQhvz3DDnyuhrn1P6WMNsGOq0uTgxvr7numE=",
+        "last_login": null,
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-07-21T14:14:49.887Z",
+        "username": "YuriiYurchenko",
+        "position": 2,
+        "email": "Yurii_Yurchenko@aa.ua",
+        "first_name": "Yurii",
+        "last_name": "Yurchenko",
+        "photo": "photos/avatar-gene6.jpg",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "task.worker",
+    "pk": 10,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$4a1xqabPI3j5mnU035VDS9$qpKEMO5WETKYIHxRA/W1jLi31r+RkY/eTxd8LSTTios=",
+        "last_login": null,
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-07-21T14:16:17.341Z",
+        "username": "AndriiFedorov",
+        "position": 9,
+        "email": "Andrii_Fedorov@herson.ua",
+        "first_name": "Andrii",
+        "last_name": "Fedorov",
+        "photo": "photos/avatar-gen5.jpg",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "task.worker",
+    "pk": 11,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$aw8rAqv2aW94IN5KGSd15H$+yGxXvs/8xNVbSCAqF+kQ7XTXWS5ia52SIEU88NhlDU=",
+        "last_login": null,
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-07-21T14:17:47.676Z",
+        "username": "IrynaHoncharenko",
+        "position": 12,
+        "email": "Iryna_Honcharenko@gmal.ua",
+        "first_name": "Iryna",
+        "last_name": "Honcharenko",
+        "photo": "photos/avatar-gen11.jpg",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "task.worker",
+    "pk": 12,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$jGVkuPJYvYnNURn8Zuti50$95rTJwJSxI+2JW6PP7rp2xT3XxZDUgOTG5WZ1OyOCG4=",
+        "last_login": null,
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-07-21T19:04:04.614Z",
+        "username": "tst",
+        "position": null,
+        "email": "tst@ukr.net",
+        "first_name": "teast",
+        "last_name": "test",
+        "photo": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "task.task",
+    "pk": 1,
+    "fields": {
+        "name": "fix bag on site mate-academy",
+        "description": "Designed with function in mind as the driving principle, this durable, innovative, and incredibly versatile bag",
+        "deadline": "2024-10-31",
+        "is_completed": false,
+        "priority": "Urgent",
+        "task_type": 1,
+        "created_at": "2024-07-19T19:30:15.763Z",
+        "updated_at": "2024-07-19T19:30:15.763Z",
+        "assigned_to": [
+            1
+        ]
+    }
+},
+{
+    "model": "task.task",
+    "pk": 2,
+    "fields": {
+        "name": "Create Wireframe for New Client Website",
+        "description": "Develop a detailed wireframe to outline the structure and layout for the new client's website project.",
+        "deadline": "2024-07-31",
+        "is_completed": false,
+        "priority": "Urgent",
+        "task_type": 1,
+        "created_at": "2024-07-20T19:38:18.869Z",
+        "updated_at": "2024-07-20T19:38:18.869Z",
+        "assigned_to": [
+            4,
+            2
+        ]
+    }
+},
+{
+    "model": "task.task",
+    "pk": 3,
+    "fields": {
+        "name": "Conduct User Research",
+        "description": "Gather and analyze user data to understand the target audience for the upcoming website redesign.",
+        "deadline": "2025-07-31",
+        "is_completed": false,
+        "priority": "Medium",
+        "task_type": 2,
+        "created_at": "2024-07-20T19:39:32.782Z",
+        "updated_at": "2024-07-20T19:39:32.782Z",
+        "assigned_to": [
+            4
+        ]
+    }
+},
+{
+    "model": "task.task",
+    "pk": 4,
+    "fields": {
+        "name": "Develop Custom WordPress Theme",
+        "description": "Create a custom WordPress theme from scratch, ensuring compatibility with the latest plugins and SEO best practices.",
+        "deadline": "2024-09-30",
+        "is_completed": false,
+        "priority": "Urgent",
+        "task_type": 5,
+        "created_at": "2024-07-20T19:40:58.737Z",
+        "updated_at": "2024-07-20T19:40:58.738Z",
+        "assigned_to": [
+            4,
+            3
+        ]
+    }
+},
+{
+    "model": "task.task",
+    "pk": 5,
+    "fields": {
+        "name": "Optimize Website Performance",
+        "description": "Analyze and improve the loading speed and overall performance of the company's main website.",
+        "deadline": "2024-11-09",
+        "is_completed": false,
+        "priority": "Not Urgent",
+        "task_type": 9,
+        "created_at": "2024-07-21T14:28:55.551Z",
+        "updated_at": "2024-07-21T14:28:55.551Z",
+        "assigned_to": [
+            9,
+            3
+        ]
+    }
+},
+{
+    "model": "task.task",
+    "pk": 6,
+    "fields": {
+        "name": "Implement Responsive Design",
+        "description": "Ensure that all web pages are fully responsive and provide a seamless user experience across all devices.",
+        "deadline": "2024-12-28",
+        "is_completed": false,
+        "priority": "High",
+        "task_type": 12,
+        "created_at": "2024-07-21T14:29:36.537Z",
+        "updated_at": "2024-07-21T14:29:36.537Z",
+        "assigned_to": [
+            11,
+            2,
+            6
+        ]
+    }
+},
+{
+    "model": "task.task",
+    "pk": 7,
+    "fields": {
+        "name": "Integrate Payment Gateway",
+        "description": "Set up and test a secure payment gateway for the e-commerce website, ensuring smooth transaction processing.",
+        "deadline": "2025-02-28",
+        "is_completed": false,
+        "priority": "Urgent",
+        "task_type": 5,
+        "created_at": "2024-07-21T14:30:22.963Z",
+        "updated_at": "2024-07-21T14:30:22.963Z",
+        "assigned_to": [
+            8,
+            7
+        ]
+    }
+},
+{
+    "model": "task.task",
+    "pk": 8,
+    "fields": {
+        "name": "Conduct Code Review",
+        "description": "Review and provide feedback on the latest code submitted by the development team to maintain code quality.",
+        "deadline": "2025-02-15",
+        "is_completed": false,
+        "priority": "Urgent",
+        "task_type": 12,
+        "created_at": "2024-07-21T14:31:06.075Z",
+        "updated_at": "2024-07-21T14:31:06.075Z",
+        "assigned_to": [
+            10,
+            4,
+            11
+        ]
+    }
+},
+{
+    "model": "task.task",
+    "pk": 9,
+    "fields": {
+        "name": "Create SEO Strategy",
+        "description": "Develop and implement an SEO strategy to improve the search engine ranking of client websites.",
+        "deadline": "2025-02-28",
+        "is_completed": false,
+        "priority": "Urgent",
+        "task_type": 10,
+        "created_at": "2024-07-21T14:31:43.990Z",
+        "updated_at": "2024-07-21T14:31:43.990Z",
+        "assigned_to": [
+            8,
+            9
+        ]
+    }
+},
+{
+    "model": "task.task",
+    "pk": 10,
+    "fields": {
+        "name": "Set Up Analytics Tracking",
+        "description": "Configure Google Analytics and other tracking tools to monitor website traffic and user behavior.",
+        "deadline": "2025-10-02",
+        "is_completed": false,
+        "priority": "Urgent",
+        "task_type": 8,
+        "created_at": "2024-07-21T14:32:29.852Z",
+        "updated_at": "2024-07-21T14:32:29.852Z",
+        "assigned_to": [
+            4,
+            9,
+            3
+        ]
+    }
+}
+]

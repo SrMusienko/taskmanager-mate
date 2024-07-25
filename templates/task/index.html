@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="text-center mb-4">
+        <h1>Task manager app Home page</h1>
+        <p>"Welcome to TaskMaster! 🚀 Ready to conquer your day? Let's turn those tasks into triumphs!"</p>
+    </div>
+    
+    <div class="card mb-4">
+        <div class="card-body">
+            <h2>Capabilities of application</h2>
+            <p>The Project contain:</p>
+            <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <strong>Positions:</strong>
+                    <span>{{ num_positions }}</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <strong>Task types:</strong>
+                    <span>{{ num_task_type }}</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <strong>Tasks:</strong>
+                    <span>{{ num_tasks }}</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <strong>Workers:</strong>
+                    <span>{{ workers }}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <p>You have visited this page
+            {{ num_visits }} time{{ num_visits|pluralize }}.
+        </p>
+    </div>
+</div>
+{% endblock %}

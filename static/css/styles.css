@@ -1,0 +1,117 @@
+.sidebar {
+    background-color: #f8f9fa;
+    padding: 10px;
+        }
+.sidebar-item {
+    cursor: pointer;
+    padding: 5px;
+}
+.sidebar-item img {
+    display: block;
+    margin: 0 auto;
+}
+.user-info {
+    cursor: pointer;
+}
+.user-details, #menu-items {
+    display: none;
+    background-color: #f8f9fa;
+    padding: 10px;
+}
+.user-details p {
+    margin: 5px 0;
+
+}
+
+.user-details {
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    margin-top: 10px;
+    text-align: left;
+}
+.custom-menu {
+    text-align: center; /* Центрируем меню */
+    margin: 20px 0; /* Добавляем отступы сверху и снизу */
+}
+
+.custom-menu li {
+    margin: 15px 0; /* Увеличиваем расстояние между пунктами меню */
+}
+
+.custom-menu a {
+    font-size: 1.5em; /* Увеличиваем размер шрифта */
+    color: #007bff; /* Синий цвет ссылок (можете изменить на любой другой) */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-weight: bold; /* Жирный шрифт */
+    display: block; /* Чтобы увеличить кликабельную область */
+    padding: 10px; /* Добавляем внутренние отступы */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Плавный переход при наведении */
+}
+
+.custom-menu a:hover {
+    color: #fff; /* Цвет текста при наведении */
+    background-color: #007bff; /* Синий фон при наведении (можете изменить на любой другой) */
+    border-radius: 5px; /* Закругленные углы */
+}
+span {
+    color: #092498; /* Цвет текста */
+    font-size: 16px; /* Размер шрифта */
+    font-weight: bold; /* Жирность шрифта */
+}
+
+
+
+.header-wrapper {
+    width: 100%;
+    background-color: #9af7ec; /* Синий цвет фона */
+    padding: 10px 0; /* Внутренние отступы сверху и снизу */
+    border-radius: 15px;
+}
+
+.custom-header {
+    max-width: 1200px; /* Максимальная ширина контейнера */
+    margin: 0 auto; /* Центрирование контейнера */
+    padding: 0 15px; /* Внутренние отступы слева и справа */
+    color: white; /* Белый цвет текста */
+}
+
+.custom-header img,
+.custom-header .taskmanager-title {
+    color: #092498; /* Белый цвет текста */
+}
+
+.custom-header .taskmanager-title {
+    margin: 0; /* Убираем отступы */
+    padding-left: 10px; /* Отступ слева для текста */
+}
+
+.content-wrapper {
+    background-color: #f8f9fa; /* Светло-серый цвет фона */
+    border: 1px solid #dee2e6; /* Серый цвет рамки */
+    border-radius: 15px; /* Закругленные углы */
+    padding: 20px; /* Внутренние отступы */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+.mr-3 {
+    margin-right: 1rem; /* Отступ справа */
+}
+
+.table {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.table th, .table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.btn {
+  width: 80px;
+}
+
+.sort-links a.active {
+font-weight: bold;
+text-decoration: underline;
+}
