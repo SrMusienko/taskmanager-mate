@@ -1,47 +1,13 @@
 # Virtual environment
 .venv/
-env/
-venv/
 
 # Django specific
-*.log
-*.pot
-*.pyc
 __pycache__/
-local_settings.py
 db.sqlite3
-db.sqlite3-journal
 media/
 
 # Static files (if using collectstatic)
-# staticfiles/
-
-# Python specific
-*.py[cod]
-*$py.class
-
-# Distribution / packaging
-build/
-dist/
-*.egg-info/
-
-# Test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-cover/
-
-# Documentation
-docs/_build/
+staticfiles/
 
 # IDE specific
 .idea/
@@ -49,18 +15,8 @@ docs/_build/
 *.iml
 *.ipr
 
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# PyCharm
-# You might want to uncomment these if you use them:
-# .idea/.idea/**/workspace.xml
-# .idea/.idea/**/tasks.xml
-# .idea/.idea/**/usage.statistics.xml
-
 # Environment variables
 .env
 
 # Other
-*.env
 .isort.cfg
