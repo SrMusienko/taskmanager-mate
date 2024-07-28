@@ -2,8 +2,8 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import Group
 
-from task.models import Worker, Task, Position, TaskType
-from task.forms import WorkerCreationForm, WorkerChangeForm
+from task.forms import WorkerChangeForm, WorkerCreationForm
+from task.models import Position, Task, TaskType, Worker
 
 
 @admin.register(Worker)

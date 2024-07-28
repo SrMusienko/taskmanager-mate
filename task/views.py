@@ -11,14 +11,9 @@ from task.forms import (
     TaskForm,
     TaskSearchForm,
     WorkerForm,
-    WorkerSearchForm
+    WorkerSearchForm,
 )
-from task.models import (
-    Position,
-    Task,
-    TaskType,
-    Worker
-)
+from task.models import Position, Task, TaskType, Worker
 
 
 @login_required
