@@ -30,12 +30,7 @@ DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-<<<<<<< staging
 ALLOWED_HOSTS = ['taskmanager-mate.onrender.com', 'localhost', '127.0.0.1']
-=======
-ALLOWED_HOSTS = ['taskmanager-mate.onrender.com']
->>>>>>> develop
-
 
 # Application definition
 
