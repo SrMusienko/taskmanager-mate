@@ -1,8 +1,10 @@
-from django.test import TestCase
-from django.core.files.uploadedfile import SimpleUploadedFile
-from PIL import Image
-import tempfile
 import io
+import tempfile
+
+from django.core.files.uploadedfile import SimpleUploadedFile
+from django.test import TestCase
+from PIL import Image
+
 from task.forms import WorkerForm
 
 

@@ -1,7 +1,8 @@
-from django.urls import reverse
-from django.test import TestCase
 from django.contrib.auth import get_user_model
-from task.models import Worker, Position, TaskType, Task
+from django.test import TestCase
+from django.urls import reverse
+
+from task.models import Position, Task, TaskType, Worker
 
 
 class AuthTestCase(TestCase):

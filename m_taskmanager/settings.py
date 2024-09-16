@@ -30,7 +30,11 @@ DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
+<<<<<<< staging
+ALLOWED_HOSTS = ['taskmanager-mate.onrender.com', 'localhost', '127.0.0.1']
+=======
 ALLOWED_HOSTS = ['taskmanager-mate.onrender.com']
+>>>>>>> develop
 
 
 # Application definition
@@ -84,15 +88,14 @@ WSGI_APPLICATION = 'm_taskmanager.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.parse(
+        os.getenv(
+            'DATABASE_URL',
+            'sqlite:///{}'.
+            format(BASE_DIR / 'db.sqlite3')
+        )
+    )
 }
-DATABASE_URL = os.getenv('DATABASE_URL')
-
-if DATABASE_URL:
-    DATABASES['default'] = dj_database_url.parse(DATABASE_URL)
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -136,14 +139,14 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = ''
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'index'
-LOGOUT_REDIRECT_URL = 'index'
+
 
 AUTH_USER_MODEL = 'task.Worker'
 
@@ -152,3 +155,26 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = 'staticfiles'
+
+DROPBOX_OAUTH2_TOKEN = os.getenv('DROPBOX_ACCESS_TOKEN')
+DROPBOX_APP_KEY = os.getenv('DROPBOX_APP_KEY')
+DROPBOX_APP_SECRET = os.getenv('DROPBOX_APP_SECRET')
+DROPBOX_OAUTH2_REFRESH_TOKEN = os.getenv('DROPBOX_REFRESH_TOKEN')
+
+STORAGES = {
+    "default": {
+        "BACKEND": "storages.backends.dropbox.DropboxStorage",
+        "OPTIONS": {
+            "oauth2_access_token": DROPBOX_OAUTH2_TOKEN,
+            "app_key": DROPBOX_APP_KEY,
+            "app_secret": DROPBOX_APP_SECRET,
+            "oauth2_refresh_token": DROPBOX_OAUTH2_REFRESH_TOKEN,
+            "root_path": "/TaskManager/"
+        },
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
+
+LOGOUT_REDIRECT_URL = '/'
