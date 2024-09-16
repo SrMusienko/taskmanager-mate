@@ -8,6 +8,6 @@
     {{ form|crispy }}
 
     <input type="submit" value="Submit" class="btn btn-primary">
-    <button class="btn btn-secondary" onclick="window.history.back();">Cancel</button>
+    <a href="{% url 'task:position-detail' pk=object.pk %}" class="btn btn-secondary">Cancel</a>
   </form>
 {% endblock %}

@@ -6,6 +6,6 @@
     {% csrf_token %}
 
     <input type="submit" value="Yes" class="btn btn-danger" style="width: 80px;">
-    <a href="{% url 'task:position-detail' object.pk %}" class="btn btn-secondary">Cancel</a>
+    <a href="{% url 'task:position-detail' pk=object.pk %}" class="btn btn-secondary">Cancel</a>
   </form>
 {% endblock %}

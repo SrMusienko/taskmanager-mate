@@ -1,8 +1,10 @@
 from datetime import datetime, timedelta
-from django.test import TestCase
+
 from django.contrib.auth import get_user_model
+from django.test import TestCase
 from django.urls import reverse
-from task.models import Position, TaskType, Task
+
+from task.models import Position, Task, TaskType
 
 
 class AdminPanelTest(TestCase):
